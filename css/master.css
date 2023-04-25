@@ -1,4 +1,24 @@
 /* Start Global Rules */
+:root {
+    --blue-color: #0075ff;
+    --blue-alt-color: #0d69d5;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --gray-color: #888;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: white;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color);
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--blue-alt-color);
+}
 body {
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -97,7 +117,7 @@ ul {
     }
 }
 /* End Sidebar */
-/* Start Head*/
+/* Start Content*/
 .content {
     width: 100%;
 }
@@ -110,19 +130,47 @@ ul {
 
 }
 .content .head .search {
-
+    position: relative;
+}
+.content .head .search::before {
+    font-family: var(--fa-style-family-classic);
+    content: '\f002';
+    font-weight: 900;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: var(--gray-color);
+}
+.content .head .search input {
+    padding: 10px 10px 10px 30px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    width: 160px;
+    transition: width 0.3s;
+}
+.content .head .search input:focus {
+    width: 180px;
+}
+.content .head .search input:focus::placeholder {
+    opacity: 0;
 }
 .content .head .profile {
     display: flex;
     align-items: center;
     gap: 15px;
 }
-.content .head .profile i {
-    font-size: 22px;
-    cursor: pointer;
+.content .head .profile span {
+    display: block;
     position: relative;
+    cursor: pointer;
 }
-.content .head .profile i::after {
+.content .head .profile span i {
+    font-size: 22px;
+}
+.content .head .profile span::before {
     content: "";
     position: absolute;
     background-color: red;
@@ -136,4 +184,23 @@ ul {
     max-width: 100%;
     width: 35px;
 }
-/* End Head*/
+.page .title {
+    margin: 20px 20px 40px;
+    position: relative;
+}
+.page .title::before,
+.page .title::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    bottom: -10px;
+    left: 0;
+}
+.page .title::before {
+    width: 130px;
+    background-color: white;
+}.page .title::after {
+    width: 50px;
+    background-color: #000;
+}
+/* End Content*/
