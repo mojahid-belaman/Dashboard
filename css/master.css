@@ -208,6 +208,7 @@ ul {
     grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
     margin-right: 20px;
     margin-left: 20px;
+    gap: 20px;
 }
 .page .content .welcome {
     background-color: white;
@@ -217,7 +218,7 @@ ul {
 .page .content .welcome .intro {
     display: flex;
     justify-content: space-between;
-    padding: 30px 20px;
+    padding: 20px;
     background-color: #EEE;
 }
 .page .content .welcome .intro h2 {
@@ -228,7 +229,7 @@ ul {
     color: var(--gray-color);
 }
 .page .content .welcome .intro img {
-    width: 170px;
+    width: 185px;
     margin-bottom: -10px;
 }
 .page .content .welcome .avatar {
@@ -266,7 +267,7 @@ ul {
     padding: 2px 10px;
     border-radius: 5px;
     font-size: 14px;
-    margin: 0 15px 15px auto;
+    margin: 0 15px 0 auto;
     transition: 0.3s;
 }
 .page .content .welcome .visit:hover {
@@ -281,12 +282,235 @@ ul {
     .page .content .welcome {
         text-align: center;
     }
+    .page .content .welcome .avatar {
+        margin-left: 0;
+    }
     .page .content .welcome .intro {
         justify-content: center;
+        padding-bottom: 40px;
+    }
+    .page .content .welcome .intro img {
+        display: none;
     }
     .page .content .welcome .body {
         flex-direction: column;
         gap: 30px;
     }
+}
+.page .content .quick-draft {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.page .content .quick-draft h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.page .content .quick-draft p {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--gray-color);
+    font-size: 14px;
+}
+.page .content .quick-draft input[type="text"],
+.page .content .quick-draft textarea{
+    display: block;
+    width: 100%;
+    border: none;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+.page .content .quick-draft textarea {
+    min-height: 180px;
+    resize: none;
+}
+.page .content .quick-draft input[type="submit"] {
+    display: block;
+    border: none;
+    background-color: var(--blue-color);
+    color: white;
+    width: fit-content;
+    padding: 2px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 0 0 15px auto;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.page .content .quick-draft input[type="submit"]:hover {
+    background-color: var(--blue-alt-color);
+}
+.page .content .target {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.page .content .target h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.page .content .target p {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--gray-color);
+    font-size: 14px;
+}
+.target .target-row {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+.target .target-row .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 84px;
+    height: 84px;
+    margin-right: 20px;
+}
+.blue .icon,
+.blue .progress  {
+    background-color: rgb(0 117 255 / 15%);
+}
+.orange .icon,
+.orange .progress  {
+    background-color: rgb(245 158 11 / 15%);
+}
+.green .icon,
+.green .progress  {
+    background-color: rgb(34 197 94 / 15%);
+}
+.target .target-row.blue .icon i {
+    color: var(--blue-alt-color);
+}
+.target .target-row.orange .icon i {
+    color: var(--orange-color);
+}
+.target .target-row.green .icon i {
+    color: var(--green-color);
+}
+.target .target-row .details {
+    flex: 1;
+}
+.target .target-row .details span:first-child {
+    font-size: 14px;
+    color: var(--gray-color);
+}
+.target .target-row .details span:nth-child(2) {
+    display: block;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.target .target-row .details .progress {
+    position: relative;
+    height: 6px;
+}
+.page .content .target .target-row.blue .details .progress > span {
+    background-color: var(--blue-color);
+}
+.target .target-row.orange .details .progress > span {
+    background-color: var(--orange-color);
+}
+.target .target-row.green .details .progress > span {
+    background-color: var(--green-color);
+}
+.target .target-row .details .progress > span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+.target .target-row.blue .details .progress > span span {
+    background-color: var(--blue-color);
+}
+.target .target-row.orange .details .progress > span span {
+    background-color: var(--orange-color);
+}
+.target .target-row.green .details .progress > span span {
+    background-color: var(--green-color);
+}
+.target .target-row .details .progress > span span {
+    color: #FFF;
+    position: absolute;
+    bottom: 16px;
+    right: -13px;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+.target .target-row .details .progress > span span::after {
+    content: "";
+    position: absolute;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 6px;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.target .target-row .details .progress > .blue span::after {
+    border-top-color: var(--blue-color);
+}
+.target .target-row .details .progress > .orange span::after {
+    border-top-color: var(--orange-color);
+}
+.target .target-row .details .progress > .green span::after {
+    border-top-color: var(--green-color);
+}
+.tickets {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.tickets h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.tickets p {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--gray-color);
+    font-size: 14px;
+}
+.tickets > div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.tickets > div .box {
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 13px;
+    color: var(--gray-color);
+    text-align: center;
+    border: 1px solid #eee;
+    width: calc(50% - 10px);
+}
+@media (max-width: 767px) {
+    .tickets > div .box {
+        width: 100%;
+    }
+}
+.tickets > div .box i.orange {
+    color: var(--orange-color);
+}
+.tickets > div .box i.blue {
+    color: var(--blue-color);
+}
+.tickets > div .box i.green {
+    color: var(--green-color);
+}
+.tickets > div .box i.red {
+    color: var(--red-color);
+}
+.tickets > div .box span {
+    display: block;
+    color: #000;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
 }
 /* End Content*/
