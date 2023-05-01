@@ -137,7 +137,7 @@ ul {
     content: '\f002';
     font-weight: 900;
     position: absolute;
-    left: 10px;
+    left: 30px;
     top: 50%;
     transform: translateY(-50%);
     font-size: 14px;
@@ -638,5 +638,52 @@ ul {
     background-color: #EEE;
     padding: 5px 15px;
     border-radius: 5px;
+}
+.upload {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.upload h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.upload ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+.upload ul li:not(:last-child) {
+    border-bottom: 1px solid #EEE;
+}
+.upload .file {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.upload .file img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    max-width: 100%;
+}
+.upload .file .info span:first-child {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.upload .file .info span:last-child {
+    display: block;
+    color: var(--gray-color);
+    font-size: 26px;
+}
+.upload ul li > span {
+    display: block;
+    background-color: #EEE;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 26px;
 }
 /* End Content*/
