@@ -591,8 +591,6 @@ ul {
     text-decoration: line-through;
 }
 .tasks .box:not(:last-child) {
-    margin-bottom: 15px;
-    padding-bottom: 15px;
     border-bottom: 1px solid #EEE;
 }
 .tasks .box .info {
@@ -707,7 +705,7 @@ ul {
 .projects ul li {
     display: flex;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .projects ul li::before {
     content: '';
@@ -742,6 +740,64 @@ ul {
     .projects .fly {
         display: none;
     }
+}
+.reminders {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+.reminders h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.reminders ul li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.reminders ul li > span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.reminders ul li > span.blue {
+    background-color: var(--blue-color);
+}
+.reminders ul li > span.green {
+    background-color: var(--green-color);
+}
+.reminders ul li > span.orange {
+    background-color: var(--orange-color);
+}
+.reminders ul li > span.red {
+    background-color: var(--red-color);
+}
+.reminders .info {
+    padding-left: 20px;
+}
+.reminders .info.blue {
+    border-left: 2px solid var(--blue-color);
+}
+.reminders .info.green {
+    border-left: 2px solid var(--green-color);
+}
+.reminders .info.orange {
+    border-left: 2px solid var(--orange-color);
+}
+.reminders .info.red {
+    border-left: 2px solid var(--red-color);
+}
+.reminders .info h4 {
+    margin: 0;
+}
+.reminders .info span {
+    display: block;
+    color: var(--gray-color);
+    margin-top: 5px;
+    font-size: 13px;
 }
 /* End Content */
 /* Start Animation */
