@@ -799,6 +799,52 @@ ul {
     margin-top: 5px;
     font-size: 13px;
 }
+.post {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+}
+.post h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.post .author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+.post .author img {
+    width: 50px;
+    height: 50px;
+}
+.post .author .info h4 {
+    margin: 0;
+}
+.post .author .info span {
+    display: block;
+    color: var(--gray-color);
+    margin-top: 5px;
+}
+.post .content {
+    padding: 20px 0;
+    margin: 20px 0;
+    line-height: 1.8;
+    border-top: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+    min-height: 100px;
+}
+@media (max-width: 767px) {
+    .post .content {
+        text-align: center;
+    }
+}
+.post .statis {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray-color);
+}
 /* End Content */
 /* Start Animation */
 @keyframes change-color {
