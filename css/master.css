@@ -991,6 +991,99 @@ ul {
     color: #FFF;
 }
 /* End Projects */
+/* Start Settings */
+.setting {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 20px;
+    margin: 20px;
+}
+@media (max-width: 767px) {
+    .setting {
+        grid-template-columns: minmax(100px, 1fr);
+        gap: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+.control {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.control h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.control p {
+    color: var(--gray-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.control .website {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.control .website .info h3 {
+    margin: 0;
+    font-size: 16px;
+}
+.control .website .info p {
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+.control textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px 15px;
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+.toggle-checkbox {
+    appearance: none;
+}
+.toggle-switch {
+    position: relative;
+    width: 78px;
+    height: 32px;
+    background-color: #CCC;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch {
+    background-color: var(--blue-color);
+}
+.toggle-switch::before {
+    font-family: var(--fa-style-family-classic);
+    content: '\f00d';
+    font-weight: 900;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    left: 4px;
+    top: 4px;
+    background-color: #FFF;
+    border-radius: 50%;
+    color: var(--gray-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.toggle-checkbox:checked + .toggle-switch::before {
+    left: 50px;
+    font-family: var(--fa-style-family-classic);
+    content: '\f00c';
+    color: var(--blue-color);
+}
+
+/* End Settings */
 /* Start Animation */
 @keyframes change-color {
     0%, 50% {
