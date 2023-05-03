@@ -120,6 +120,7 @@ ul {
 /* Start Content*/
 .content {
     width: 100%;
+    overflow: hidden;
 }
 .content .head {
     background-color: #FFF;
@@ -920,6 +921,76 @@ ul {
     color: #FFF;
 }
 /* End Content */
+/* Start Projects */
+.projects {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+.projects h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.projects .responsive-table {
+    overflow-x: auto;
+}
+.projects table {
+    width: 100%;
+    border-spacing: 0;
+    min-width: 1000px;
+    font-size: 15px;
+}
+.projects table thead td {
+    background-color: #EEE;
+    font-weight: bold;
+}
+.projects table td {
+    padding: 15px;
+}
+.projects table tbody tr:hover td {
+    background-color: #Faf7f7;
+}
+.projects table tbody td {
+    border-left: 1px solid #EEE;
+    border-bottom: 1px solid #EEE;
+    transition: 0.3s;
+}
+.projects table tbody td:last-child {
+    border-right: 1px solid #EEE;
+}
+.projects table tbody img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    padding: 2px;
+    background-color: #FFF;
+}
+.projects table tbody img:not(:first-child) {
+    margin-left: -20px;
+}
+.projects .status {
+    padding: 5px 8px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+.projects .status.pending {
+    background-color: var(--orange-color);
+    color: #FFF;
+}
+.projects .status.progress {
+    background-color: var(--blue-color);
+    color: #FFF;
+}
+.projects .status.completed {
+    background-color: var(--green-color);
+    color: #FFF;
+}
+.projects .status.rejected {
+    background-color: var(--red-color);
+    color: #FFF;
+}
+/* End Projects */
 /* Start Animation */
 @keyframes change-color {
     0%, 50% {
