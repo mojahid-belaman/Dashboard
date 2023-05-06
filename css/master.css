@@ -1180,6 +1180,160 @@ ul {
 .social > div:focus-within i {
     color: #000;
 }
+.control {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.control h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.control p {
+    color: var(--gray-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.control .box {
+    display: flex;
+    align-items: center;
+}
+.control .box:not(:last-child) {
+    margin-bottom: 20px;
+}
+.control .box input[type="checkbox"] {
+    appearance: none;
+}
+.control .box label:hover::before {
+    border-color: var(--blue-color);
+}
+.control .box input[type="checkbox"]:checked + label::after {
+    width: 14px;
+    height: 14px;
+    transform: scale(1);
+    border: 2px solid var(--blue-color);
+}
+.control .box label {
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.control .box label::before,
+.control .box label::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--gray-color);
+    left: 0;
+    top: 50%;
+    margin-top: -9px;
+    border-radius: 4px;
+}
+.control .box label::after {
+    font-family: var(--fa-style-family-classic);
+    content: "\f00c";
+    font-weight: 900;
+    width: 18px;
+    height: 18px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-color);
+    color: #FFFF;
+    transform: scale(0) rotate(360deg);
+    transition: 0.3s;
+}
+.manager {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+.manager h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.manager p {
+    color: var(--gray-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+.manager .date {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.manager input[type="radio"] {
+    appearance: none;
+}
+.manager .date label {
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.manager .date label::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid var(--gray-color);
+    border-radius: 50%;
+}
+.manager .date label::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 5px;
+    top: 5px;
+    border-radius: 50%;
+    background-color: var(--blue-color);
+    transform: scale(0);
+    transition: 0.3s;
+}
+.manager .date input[type="radio"]:checked + label::before {
+    border-color: var(--blue-color);
+}
+.manager .date input[type="radio"]:checked + label::after {
+    transform: scale(1);
+}
+.manager .servers {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #EEE;
+    padding-top: 20px;
+}
+@media (max-width: 767px) {
+    .manager .servers {
+        flex-direction: column;
+    } 
+}
+.manager .servers .server {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #EEE;
+    width: 100%;    
+}
+.manager .servers .server label {
+    display: block;
+    margin: 15px;
+    cursor: pointer;
+}
+.manager .servers .server label i {
+    display: block;
+    margin-bottom: 10px;
+}
+.manager .servers input[type="radio"]:checked + .server {
+    border-color: var(--blue-alt-color);
+    color: var(--blue-color);
+}
 .toggle-checkbox {
     appearance: none;
     display: none;
