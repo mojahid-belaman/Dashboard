@@ -1334,7 +1334,7 @@ ul {
     border-color: var(--blue-alt-color);
     color: var(--blue-color);
 }
-.notes {
+/* .notes {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
@@ -1342,7 +1342,7 @@ ul {
 .notes h2 {
     margin-top: 0;
     margin-bottom: 10px;
-}
+} */
 .profile {
     margin: 20px;
 }
@@ -1402,13 +1402,20 @@ ul {
 .profile .info {
     flex-grow: 1;
 }
+@media (max-width: 767px) {
+    .profile .info {
+        text-align: center;
+    }
+}
 .profile .info .box {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding: 20px;
-    border-bottom: 1px solid #EEE;
     transition: 0.3s;
+}
+.profile .info .box:not(:last-child) {
+    border-bottom: 1px solid #EEE;
 }
 .profile .info .box:hover {
     background-color: #f9f9f9;
@@ -1416,11 +1423,6 @@ ul {
 .profile .info .box > div {
     min-width: 320px;
     padding: 10px 0;
-}
-@media (max-width: 767px) {
-    .profile .info .box > div {
-        min-width: 200px;
-    }
 }
 .profile .info .box div span:first-child {
     color: var(--gray-color);
@@ -1435,6 +1437,14 @@ ul {
 .profile .info .toggle-switch {
     height: 20px;
 }
+@media (max-width: 767px) {
+    .profile .info .box > div {
+        min-width: 200px;
+    }
+    .profile .info .toggle-switch {
+        margin: auto;
+    }
+}
 .profile .info .toggle-switch::before {
     width: 12px;
     height: 12px;
@@ -1443,6 +1453,120 @@ ul {
 .profile .info .toggle-checkbox:checked + .toggle-switch::before {
     left: 62px;
 }
+.other {
+    display: flex;
+    gap: 20px;
+}
+.other .skills {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+@media (max-width: 767px) {
+    .other {
+        flex-direction: column;
+    }
+    .other .skills {
+        flex: 1;
+    }
+}
+.other .skills h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.other .skills p {
+    color: var(--gray-color);
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 15px;
+}
+.other .skills .skill {
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+}
+@media (max-width: 767px) {
+    .other .skills .skill {
+        justify-content: center;
+    }
+}
+.other .skills .skill:not(:last-child) {
+    border-bottom: 1px solid #EEE;
+}
+.other .skills .skill > span {
+    display: block;
+    background-color: #EEE;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+.other .activities {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    flex-grow: 1;
+}
+.other .activities h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.other .activities p {
+    color: var(--gray-color);
+    margin-top: 0;
+    font-size: 15px;
+}
+.other .activities .activity {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+@media (max-width: 767px) {
+    .other .activities .activity {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .other .activities .activity .info {
+        text-align: center;
+    }
+} 
+.other .activities .activity:not(:last-child) {
+    border-bottom: 1px solid #EEE;
+}
+.other .activities .activity > img {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.other .activities .activity .info span:first-child,
+.other .activities .activity .time span:first-child  {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.other .activities .activity .time span:first-child {
+    text-align: right;
+}
+.other .activities .activity .info span:last-child,
+.other .activities .activity .time span:last-child {
+    color: var(--gray-color);
+}
+@media (max-width: 767px) {
+    .other .activities .activity > img {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    .other .activities .activity .info {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .other .activities .activity .time span:first-child {
+        text-align: center;
+    }
+} 
 .toggle-checkbox {
     appearance: none;
     display: none;
