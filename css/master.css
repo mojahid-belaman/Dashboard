@@ -1334,7 +1334,7 @@ ul {
     border-color: var(--blue-alt-color);
     color: var(--blue-color);
 }
-/* .notes {
+.notes {
     background-color: white;
     border-radius: 10px;
     padding: 20px;
@@ -1342,7 +1342,7 @@ ul {
 .notes h2 {
     margin-top: 0;
     margin-bottom: 10px;
-} */
+}
 .profile {
     margin: 20px;
 }
