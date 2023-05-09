@@ -1353,7 +1353,7 @@ ul {
     border-radius: 10px ;
 }
 .profile .overview .avatar {
-    width: 300px;
+    min-width: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1432,12 +1432,22 @@ ul {
     margin: 0;
     font-weight: normal;
 }
+.profile .info .toggle-switch {
+    height: 20px;
+}
+.profile .info .toggle-switch::before {
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+}
+.profile .info .toggle-checkbox:checked + .toggle-switch::before {
+    left: 62px;
+}
 .toggle-checkbox {
     appearance: none;
     display: none;
 }
-.toggle-switch,
-.toggle-switch-long {
+.toggle-switch {
     position: relative;
     width: 78px;
     height: 32px;
@@ -1446,57 +1456,31 @@ ul {
     cursor: pointer;
     transition: 0.3s;
 }
-.toggle-switch-long {
-    width: 100px;
-    height: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-.toggle-checkbox:checked + .toggle-switch,
-.toggle-checkbox:checked + .toggle-switch-long {
+.toggle-checkbox:checked + .toggle-switch {
     background-color: var(--blue-color);
 }
-.toggle-switch::before,
-.toggle-switch-long::before {
+.toggle-switch::before {
     font-family: var(--fa-style-family-classic);
     content: '\f00d';
     font-weight: 900;
     position: absolute;
     background-color: #FFF;
     border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    left: 4px;
+    top: 4px;
     color: var(--gray-color);
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.3s;
 }
-.toggle-switch::before {
-    width: 24px;
-    height: 24px;
-    left: 4px;
-    top: 4px;
-}
-.toggle-switch-long::before {
-    width: 15px;
-    height: 15px;
-    left: 4px;
-    top: 2px;
-}
-.toggle-checkbox:checked + .toggle-switch::before,
-.toggle-checkbox:checked + .toggle-switch-long::before {
+.toggle-checkbox:checked + .toggle-switch::before {
     font-family: var(--fa-style-family-classic);
     content: '\f00c';
     color: var(--blue-color);
-}
-.toggle-checkbox:checked + .toggle-switch::before {
     left: 50px;
-}
-.toggle-checkbox:checked + .toggle-switch-long::before {
-    left: 80px;
-}
-.toggle-checkbox:checked + .toggle-switch-long {
-    background-color: var(--blue-color);
 }
 /* End Settings */
 /* Start Animation */
